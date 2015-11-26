@@ -1,8 +1,3 @@
-// Player variables 
-
-var player1 = 'O';
-var player2 = 'X';
-
 var currentPlayer = 'X';
 
 // Player moves
@@ -55,45 +50,26 @@ var recordScore = function(move){
 // win function // 
 
 var winner = function(){
-	if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('2') >= 0) && (xMove.indexOf('3') >= 0)){
+	if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('2') >= 0) && (xMove.indexOf('3') >= 0) ||
+		(xMove.indexOf('4') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('6') >= 0) ||
+		(xMove.indexOf('7') >= 0) && (xMove.indexOf('8') >= 0) && (xMove.indexOf('9') >= 0) || 
+		(xMove.indexOf('1') >= 0) && (xMove.indexOf('4') >= 0) && (xMove.indexOf('7') >= 0) ||
+		(xMove.indexOf('2') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('8') >= 0) ||
+		(xMove.indexOf('3') >= 0) && (xMove.indexOf('6') >= 0) && (xMove.indexOf('9') >= 0) || 
+		(xMove.indexOf('1') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('9') >= 0) ||
+		(xMove.indexOf('3') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('7') >= 0)){
 		alert('X wins the game')
-	} else if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('2') >= 0) && (xMove.indexOf('3') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('4') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('6') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('7') >= 0) && (xMove.indexOf('8') >= 0) && (xMove.indexOf('9') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('4') >= 0) && (xMove.indexOf('7') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('2') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('8') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('3') >= 0) && (xMove.indexOf('6') >= 0) && (xMove.indexOf('9') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('9') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('3') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('7') >= 0)){
-		alert('X wins the game')
-	} else if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('2') >= 0) && (xMove.indexOf('3') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('1') >= 0) && (oMove.indexOf('2') >= 0) && (oMove.indexOf('3') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('4') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('6') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('7') >= 0) && (oMove.indexOf('8') >= 0) && (oMove.indexOf('9') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('1') >= 0) && (oMove.indexOf('4') >= 0) && (oMove.indexOf('7') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('2') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('8') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('3') >= 0) && (oMove.indexOf('6') >= 0) && (oMove.indexOf('9') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('1') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('9') >= 0)){
-		alert('O wins the game')
-	} else if ((oMove.indexOf('3') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('7') >= 0)){
+	} else if ((oMove.indexOf('1') >= 0) && (oMove.indexOf('2') >= 0) && (oMove.indexOf('3') >= 0) ||
+			   (oMove.indexOf('4') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('6') >= 0) ||
+			   (oMove.indexOf('7') >= 0) && (oMove.indexOf('8') >= 0) && (oMove.indexOf('9') >= 0) ||
+			   (oMove.indexOf('1') >= 0) && (oMove.indexOf('4') >= 0) && (oMove.indexOf('7') >= 0) ||
+			   (oMove.indexOf('2') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('8') >= 0) ||
+			   (oMove.indexOf('3') >= 0) && (oMove.indexOf('6') >= 0) && (oMove.indexOf('9') >= 0) ||
+			   (oMove.indexOf('1') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('9') >= 0) ||
+			   (oMove.indexOf('3') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('7') >= 0)){
 		alert('O wins the game')
 	}
 };
-
 
 // Document ready section // This going to load once shit goes down bitch !
 
@@ -107,6 +83,3 @@ $(document).ready(function(){
 		switchPlayer();
 	});
 });
-
-
-
