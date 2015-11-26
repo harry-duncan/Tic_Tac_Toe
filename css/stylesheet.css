@@ -3,10 +3,12 @@
 .container {
 /*	border: 1px solid orange;*/
 	position: relative;
+	background-color: black;
 	margin: 0 auto;
-	height: 856px;
-	width: 856px;
-	margin-top: 50px;
+	height: 100%;
+	width: 100%;
+	background-image:url(../images/2015-08-21-barnimages-jose-001.jpg);
+	background-size: cover;
 }
 
 
@@ -14,7 +16,7 @@
 /* Overall Gameboard */
 
 .gameboard {
-	border: 1px solid pink;
+	border: 1px solid white;
 	height: 606px;
 	width: 606px;
 	position: relative;
@@ -26,62 +28,19 @@
 
 .gameboard div {
 	display: inline-block;
-	font-size: 20px;
+	font-size: 100px;
+	color: white;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+	font-weight: lighter;
 }
 
-.tile1 {
-	border: 1px solid blue;
-	height: 200px;
-	width: 200px;
-}
-
-.tile2 {
-	border: 1px solid blue;
-	height: 200px;
-	width: 200px;
-}
-
-.tile3 {
-	border: 1px solid blue;
-	height: 200px;
-	width: 200px;
-}
-
-.tile4 {
-	border: 1px solid red;
-	height: 200px;
-	width: 200px;
-}
-
-.tile5 {
-	border: 1px solid red;
-	height: 200px;
-	width: 200px;
-}
-
-.tile6 {
-	border: 1px solid red;
-	height: 200px;
-	width: 200px;
-}
-
-.tile7 {
-	border: 1px solid green;
-	height: 200px;
-	width: 200px;
-}
-
-.tile8 {
-	border: 1px solid green;
-	height: 200px;
-	width: 200px;
-}
-
-.tile9 {
-	border: 1px solid green;
+.tile {
+	text-align: center;
+	line-height: 200px;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,0.1);
 	height: 200px;
 	width: 200px;
 }
@@ -89,6 +48,7 @@
 /* Page Elements */
 
 h2 {
+	color: grey;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom:25px;

@@ -10,6 +10,9 @@ var currentPlayer = 'X';
 var xMove = [];
 var oMove = [];
 
+var draws = 0;
+var moveCount = 0;
+
 // Switch player function // this works 
 
 var switchPlayer = function(){
@@ -18,7 +21,6 @@ var switchPlayer = function(){
 	} else if (currentPlayer === 'O' ){
 		currentPlayer = 'X'
 	}
-	console.log(currentPlayer);
 };
 
 // Player move function // Updates the box // This works 
@@ -26,7 +28,17 @@ var switchPlayer = function(){
 var playerMove = function(move){
 	if (currentPlayer){
 		$(move).html(currentPlayer);
+		moveCount ++;
+
 	}
+};
+
+// Draw function
+
+var draw = function(){
+	if (moveCount === 9){
+		alert('Draw');
+	};
 };
 
 // Record the score // This works 
@@ -40,7 +52,7 @@ var recordScore = function(move){
 	}
 };
 
-/// win function //// 
+// win function // 
 
 var winner = function(){
 	if ((xMove.indexOf('1') >= 0) && (xMove.indexOf('2') >= 0) && (xMove.indexOf('3') >= 0)){
@@ -87,13 +99,12 @@ var winner = function(){
 
 $(document).ready(function(){
 	$('.tile').click(function(){
-		console.log('this is working');
 		console.log(this);
 		playerMove(this);
 		recordScore(this);
-		winner();
+		var winTheGame = winner();
+		if (!winTheGame){draw()};
 		switchPlayer();
-
 	});
 });
 
