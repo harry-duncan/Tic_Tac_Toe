@@ -1,10 +1,8 @@
+// Variables
+
 var currentPlayer = 'X';
-
-// Player moves
-
 var xMove = [];
 var oMove = [];
-
 var draws = 0;
 var moveCount = 0;
 
@@ -24,7 +22,6 @@ var playerMove = function(move){
 	if (currentPlayer){
 		$(move).html(currentPlayer);
 		moveCount ++;
-
 	}
 };
 
@@ -60,15 +57,15 @@ var winner = function(){
 		(xMove.indexOf('3') >= 0) && (xMove.indexOf('5') >= 0) && (xMove.indexOf('7') >= 0)){
 		alert('X wins the game')
 	} else if ((oMove.indexOf('1') >= 0) && (oMove.indexOf('2') >= 0) && (oMove.indexOf('3') >= 0) ||
-			   (oMove.indexOf('4') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('6') >= 0) ||
-			   (oMove.indexOf('7') >= 0) && (oMove.indexOf('8') >= 0) && (oMove.indexOf('9') >= 0) ||
-			   (oMove.indexOf('1') >= 0) && (oMove.indexOf('4') >= 0) && (oMove.indexOf('7') >= 0) ||
-			   (oMove.indexOf('2') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('8') >= 0) ||
-			   (oMove.indexOf('3') >= 0) && (oMove.indexOf('6') >= 0) && (oMove.indexOf('9') >= 0) ||
-			   (oMove.indexOf('1') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('9') >= 0) ||
-			   (oMove.indexOf('3') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('7') >= 0)){
+		(oMove.indexOf('4') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('6') >= 0) ||
+		(oMove.indexOf('7') >= 0) && (oMove.indexOf('8') >= 0) && (oMove.indexOf('9') >= 0) ||
+		(oMove.indexOf('1') >= 0) && (oMove.indexOf('4') >= 0) && (oMove.indexOf('7') >= 0) ||
+		(oMove.indexOf('2') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('8') >= 0) ||
+		(oMove.indexOf('3') >= 0) && (oMove.indexOf('6') >= 0) && (oMove.indexOf('9') >= 0) ||
+		(oMove.indexOf('1') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('9') >= 0) ||
+		(oMove.indexOf('3') >= 0) && (oMove.indexOf('5') >= 0) && (oMove.indexOf('7') >= 0)){
 		alert('O wins the game')
-	}
+	};
 };
 
 // Document ready section // This going to load once shit goes down bitch !
